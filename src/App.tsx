@@ -5,10 +5,14 @@ import {Person } from "./components/Person";
 import {PersonList} from "./components/PersonList";
 import { Status } from "./components/Status";
 import {Button} from "./components/Button";
-
+import {Input} from "./components/Input";
+import { Container } from './components/Container';
+import {PersonImportType} from './components/PersonImportType'
+import {PersonListImportType} from './components/PersonListImportType';
+import {LoggedIn} from './components/state/LoggedIn';
+import {User} from './components/state/User';
 //On hovering on App, typescript tells us that App is of type function. This is called type inference.
 function App() {
-  const [count, setCount] = useState(0)
   const name = {
     first: "Shravya",
     last :"Rao"
@@ -30,7 +34,17 @@ function App() {
       <Person name={name} />
       <PersonList names={listOfNames}/>
       <Status status="error"/>
-      <Button handleClick={() => {console.log("clicked")}}/>
+      {/* <Button handleClick={() => {console.log("Button clicked")}}/> */}
+      <Button handleClick={(event, id) => {console.log("event", event, id)}}/>
+      <Input value="" handleChange={(event) => {console.log(event)}}/>
+      <Container styles={{border : "1px solid" , padding: "20px"}}/>
+      <p>--------------------------------------With types imported------------------------------------</p>
+      <PersonImportType name={name} />
+      <PersonListImportType names ={listOfNames} />
+      <p>--------------------------------------USe State with ts---------------------------------------</p>
+      <LoggedIn />
+      <p>--------------------------------------Dynamic State value---------------------------------------</p>
+      <User />
     </div>
   )
 }
