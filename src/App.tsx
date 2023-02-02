@@ -11,6 +11,8 @@ import {PersonImportType} from './components/PersonImportType'
 import {PersonListImportType} from './components/PersonListImportType';
 import {LoggedIn} from './components/state/LoggedIn';
 import {User} from './components/state/User';
+import {Counter} from './components/state/Counter';
+import {CounterClass} from './components/class/Counter';
 //On hovering on App, typescript tells us that App is of type function. This is called type inference.
 function App() {
   const name = {
@@ -45,6 +47,9 @@ function App() {
       <LoggedIn />
       <p>--------------------------------------Dynamic State value---------------------------------------</p>
       <User />
+      <Counter />
+      <p>--------------------------------------With Class Component--------------------------------------</p>
+      <CounterClass />
     </div>
   )
 }

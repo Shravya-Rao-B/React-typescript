@@ -15,4 +15,11 @@ Use types when building application. Interfaces while building libraries.
  * Using class components becomes too much nesting of code
  * A class needs to be created and extended, need to have a constructor
  * State needs to be called with this keyword everywhere
+
+### useContext Hook
+https://www.youtube.com/watch?v=lhMKvyLRWo0
+
+### What is pre tag <pre>
+* Text in a <pre> element is displayed in a fixed-width font, and the text preserves both spaces and line breaks.
+* The text will be displayed exactly as written in the HTML source code.
  
